@@ -10,7 +10,7 @@ bool comment_check = false;
 
 letter												[A-Za-z_]
 digit												[0-9]
-special_symbols										"&lt"|"&gt"|"&amp"
+special_symbols										"&lt"|"&gt"|"&amp"|"&apos"|"&quot"
 all_symbols											[\~\@\#\$\%\^\*\!\"\(\)\+\{\}\"\|\[\]\;\'\\\,\.\/]					
 
 %%

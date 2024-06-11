@@ -12,7 +12,7 @@ extern FILE *yyin;
 
 %%
 
-//возможные выражения
+
 statement:
 	declaration statement
 	| comment statement
@@ -20,7 +20,7 @@ statement:
 	| dtd statement
 	| ;
 
-//доктайп декларейшн
+
 dtd:
 	DTD_OPEN text TAG_CLOSE;
 
@@ -52,22 +52,22 @@ name:
 	| NAME '-' name
 	| NAME ':' name;
 
-//пустой тег
+
 empty_tag:
 	TAG_BEG_OPEN name EMPTY_TAG_CLOSE;
 
-//атрибут
+
 attribute:
 	NAME '=' ATTRIBUTE attribute
 	| NAME ':' attribute
 	| NAME '-' attribute
 	| ;
 
-//начало тега
+
 tag_beg:
 	TAG_BEG_OPEN name TAG_CLOSE;
 
-//конец тега
+
 tag_end:
 	TAG_END_OPEN name TAG_CLOSE;	
 
